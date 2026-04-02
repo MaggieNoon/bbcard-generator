@@ -1,0 +1,10 @@
+[phases.build]
+cmds = [
+  "npm run build",
+  "mkdir -p dist/server",
+  "cp server/master-template.pptx dist/server/master-template.pptx",
+  "mkdir -p uploads"
+]
+
+[start]
+cmd = "node dist/index.cjs"

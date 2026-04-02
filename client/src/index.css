@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Navy/professional palette — derived from the baseball card's dark navy #142137 */
+    --background: 214 35% 97%;
+    --foreground: 214 40% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 214 40% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 40% 12%;
+    --primary: 214 60% 22%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 214 20% 92%;
+    --secondary-foreground: 214 40% 22%;
+    --muted: 214 15% 93%;
+    --muted-foreground: 214 15% 48%;
+    --accent: 214 20% 88%;
+    --accent-foreground: 214 40% 22%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 18% 86%;
+    --input: 214 18% 86%;
+    --ring: 214 60% 22%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 214 35% 8%;
+    --foreground: 214 15% 88%;
+    --card: 214 30% 11%;
+    --card-foreground: 214 15% 88%;
+    --popover: 214 30% 11%;
+    --popover-foreground: 214 15% 88%;
+    --primary: 214 55% 60%;
+    --primary-foreground: 214 40% 10%;
+    --secondary: 214 20% 18%;
+    --secondary-foreground: 214 15% 80%;
+    --muted: 214 20% 16%;
+    --muted-foreground: 214 10% 52%;
+    --accent: 214 20% 20%;
+    --accent-foreground: 214 15% 80%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 18% 20%;
+    --input: 214 18% 20%;
+    --ring: 214 55% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom styles */
+.card-preview-header {
+  background-color: #142137;
+  color: white;
+}
+
+.linkedin-gradient {
+  background: linear-gradient(135deg, #0A66C2 0%, #004182 100%);
+}
+
+.status-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
+}
+
+.field-row {
+  @apply grid gap-3;
+}
+
+.section-divider {
+  @apply border-t border-border my-6;
+}
+
+/* Tab styling */
+.tab-active {
+  border-bottom: 2px solid #142137;
+  color: #142137;
+}
